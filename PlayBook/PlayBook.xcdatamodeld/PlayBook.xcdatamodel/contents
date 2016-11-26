@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+    <entity name="AudioBody" representedClassName=".AudioBody" syncable="YES">
+        <attribute name="added" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coverPicture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastPlayed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="secondPicture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="touched" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bookmarks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="UserMarker" inverseName="audioBody" inverseEntity="UserMarker" syncable="YES"/>
+        <relationship name="currentLocation" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PlayHead" inverseName="audioBody" inverseEntity="PlayHead" syncable="YES"/>
+        <relationship name="sections" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Sections" inverseName="audioBody" inverseEntity="Sections" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Track" inverseName="audioBody" inverseEntity="Track" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Type" inverseName="audioBodies" inverseEntity="Type" syncable="YES"/>
+    </entity>
+    <entity name="Chapter" representedClassName=".Chapter" parentEntity="Marker" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <relationship name="audioBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioBody" syncable="YES"/>
+        <relationship name="section" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Sections" inverseName="chapters" inverseEntity="Sections" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Track" inverseName="chapters" inverseEntity="Track" syncable="YES"/>
+    </entity>
+    <entity name="Entity" syncable="YES"/>
+    <entity name="Marker" representedClassName=".Marker" syncable="YES">
+        <attribute name="time" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="startTrack" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Track" inverseName="markers" inverseEntity="Track" syncable="YES"/>
+    </entity>
+    <entity name="PlayHead" representedClassName=".PlayHead" parentEntity="Marker" syncable="YES">
+        <relationship name="audioBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioBody" inverseName="currentLocation" inverseEntity="AudioBody" syncable="YES"/>
+    </entity>
+    <entity name="Sections" representedClassName=".Sections" syncable="YES">
+        <attribute name="ordering" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="audioBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioBody" inverseName="sections" inverseEntity="AudioBody" syncable="YES"/>
+        <relationship name="chapters" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Chapter" inverseName="section" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName=".Tag" syncable="YES">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="marker" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserMarker" inverseName="tag" inverseEntity="UserMarker" syncable="YES"/>
+    </entity>
+    <entity name="Track" representedClassName=".Track" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="trackName" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="audioBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioBody" inverseName="tracks" inverseEntity="AudioBody" syncable="YES"/>
+        <relationship name="chapters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Chapter" inverseName="tracks" inverseEntity="Chapter" syncable="YES"/>
+        <relationship name="markers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Marker" inverseName="startTrack" inverseEntity="Marker" syncable="YES"/>
+    </entity>
+    <entity name="Type" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="audioBodies" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AudioBody" inverseName="type" inverseEntity="AudioBody" syncable="YES"/>
+    </entity>
+    <entity name="UserMarker" representedClassName=".UserMarker" parentEntity="Marker" syncable="YES">
+        <relationship name="audioBody" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioBody" inverseName="bookmarks" inverseEntity="AudioBody" syncable="YES"/>
+        <relationship name="tag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="marker" inverseEntity="Tag" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FetchRequest" entity="AudioBody"/>
+    <elements>
+        <element name="AudioBody" positionX="-342" positionY="-136" width="128" height="240"/>
+        <element name="Chapter" positionX="25" positionY="216" width="128" height="103"/>
+        <element name="Entity" positionX="-135" positionY="-189" width="128" height="45"/>
+        <element name="Marker" positionX="88" positionY="-337" width="128" height="88"/>
+        <element name="PlayHead" positionX="-27" positionY="-90" width="128" height="58"/>
+        <element name="Sections" positionX="-308" positionY="167" width="128" height="103"/>
+        <element name="Tag" positionX="18" positionY="27" width="128" height="75"/>
+        <element name="Track" positionX="277" positionY="99" width="128" height="118"/>
+        <element name="Type" positionX="-126" positionY="-180" width="128" height="75"/>
+        <element name="UserMarker" positionX="-110" positionY="-175" width="128" height="75"/>
+    </elements>
+</model>

@@ -1,0 +1,142 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Alamofire (3.4.0)
+  - Argo (3.0.1)
+  - AYVibrantButton (1.0.3)
+  - Cartography (0.6.0)
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - Cosmos (1.2.3)
+  - Dwifft (0.3.1)
+  - FLEX (2.3.0)
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core (= 2.1.8)
+    - FontAwesomeKit/FontAwesome (= 2.1.8)
+    - FontAwesomeKit/FoundationIcons (= 2.1.8)
+    - FontAwesomeKit/IonIcons (= 2.1.8)
+    - FontAwesomeKit/Zocial (= 2.1.8)
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
+  - HockeySDK (3.8.6):
+    - HockeySDK/AllFeaturesLib (= 3.8.6)
+  - HockeySDK/AllFeaturesLib (3.8.6)
+  - ionicons (2.0.3)
+  - JDStatusBarNotification (1.5.3)
+  - LTMorphingLabel (0.2.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
+  - Nimble (4.0.1)
+  - Quick (0.9.2)
+  - Runes (3.2.0)
+  - SwiftCarousel (0.7.1)
+  - SwiftIconFont (0.0.6)
+  - SwiftMoment (0.2)
+  - SwiftyUserDefaults (2.2.0)
+  - YouTubePlayer (0.3.0)
+  - ZCAnimatedLabel (0.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - Argo
+  - AYVibrantButton (from `https://github.com/joedaniels29/AYVibrantButton.git`)
+  - Cartography
+  - CocoaLumberjack
+  - Cosmos (~> 1.1)
+  - Dwifft
+  - FLEX (~> 2.0)
+  - FontAwesomeKit (~> 2.1.0)
+  - HockeySDK (~> 3.8.5)
+  - ionicons
+  - JDStatusBarNotification
+  - LTMorphingLabel
+  - MagicalRecord
+  - Mantle (~> 2.0.2)
+  - Nimble
+  - Quick
+  - Runes
+  - SwiftCarousel
+  - SwiftIconFont
+  - SwiftMoment (from `https://github.com/joedaniels29/SwiftMoment.git`)
+  - SwiftyUserDefaults
+  - YouTubePlayer
+  - ZCAnimatedLabel
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+  AYVibrantButton:
+    :git: https://github.com/joedaniels29/AYVibrantButton.git
+  SwiftMoment:
+    :git: https://github.com/joedaniels29/SwiftMoment.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: fa288a5420f28904f2b63ce24901da9a017ef8c4
+    :git: https://github.com/Alamofire/Alamofire.git
+  AYVibrantButton:
+    :commit: a280e53e6dee1a78803d60a14c6a95be901635bd
+    :git: https://github.com/joedaniels29/AYVibrantButton.git
+  SwiftMoment:
+    :commit: db7f6de9dc00bef6c3599075fd5475f3c3724079
+    :git: https://github.com/joedaniels29/SwiftMoment.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Argo: 22c5d62b7967020a641468c91dc9488bea9523b8
+  AYVibrantButton: 7cc5b2c74f6f6a0a52d5b0db361a9d3b755bc448
+  Cartography: 70af183a248547694a8cfaa6b989cb7e04589985
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  Cosmos: efddd01b729956ad6335bc58bc92e5735a1d12a3
+  Dwifft: b7eaeaaf4ac14a2e77b0c661cd1b5524c58fa891
+  FLEX: ba80ea13d2c784e85e616137fd4eff164781e364
+  FontAwesomeKit: 64759fb28b5d2e74a1bd81553d7c11ca10e32179
+  HockeySDK: ab68303eec6680f6b539de65d747742dd276e934
+  ionicons: ec1e86e6c3316bd9942a7f024080dd75c70dd6a5
+  JDStatusBarNotification: 29413865af11c862c17180610b0f46a21118b412
+  LTMorphingLabel: 490aa8e079f9247c7f3130f7d4b1be1d66677377
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  Runes: ab2f892272d5165f64620f8086578b28cde98a02
+  SwiftCarousel: f4df5aadd20729d7a4535426fc30fa12fab31509
+  SwiftIconFont: 85072e1a1694dd6a0cf7ecffb6e8a880d2bbcc9d
+  SwiftMoment: b1bf1b5708b4bc99db47697e32683430d7c19759
+  SwiftyUserDefaults: e7c8197a9d4068702e7f2406a968cae413b8de27
+  YouTubePlayer: 88713a96c356f2c88da8925eb61438eda88bcd57
+  ZCAnimatedLabel: 519b688bef4403fd356bc785f9b61cdfd8e6472d
+
+COCOAPODS: 0.39.0
